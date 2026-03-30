@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampNet-Node</title>
+    <style>
+        body { font-family: 'Times New Roman', Times, serif; align-items: center; background-color: #1c0f06; color: #7d1702; padding: 20px; }
+        input, button {font-family: 'Courier New', Courier, monospace; padding: 10px; margin: 5px 0; background-color: #222; color: #7d1702; border: 1px solid #7d1702;}
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h1>[ Campus Net: Local Node ]</h1>
+    
+    <div id="auth-section">
+        <h3>Initialize Identity</h3>
+        <input type="text" id="alias" placeholder="Username (Alias)">
+        <input type="password" id="passphrase" placeholder="Passphrase">
+        <br>
+        <button id="btn-signup">Generate Keypair (Sign Up)</button>
+        <button id="btn-login">Unlock Node (Log In)</button>
+    </div>
+
+    <div id="dashboard" class="hidden">
+        <h3>Node Active: <span id="current-user"></span></h3>
+        <p>Your public key is generated and your local state is active.</p>
+        <button id="btn-logout">Clear Local Keys (Log Out)</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
