@@ -1,0 +1,11 @@
+# Node dependencies
+node_modules/
+
+# Mac system files
+.DS_Store
+
+# GUN.js local storage directories (keeps your local test data out of the repo)
+radata/
+
+# Environment variables (for later)
+.env
