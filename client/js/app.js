@@ -1,7 +1,9 @@
 // 1. Initialize GUN
 // It runs purely locally in the browser memory and local storage. 
 
-const gun = GUN();
+const gun = Gun({
+    peers: ['https://localhost:8765/gun']
+});
 
 // 2. Initialize the SEA User module
 const user = gun.user().recall({sessionStorage: true});
